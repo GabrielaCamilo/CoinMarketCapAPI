@@ -28,7 +28,7 @@ lib/
 1. Clone o repositório:
 
 bash
-git clone https://github.com/seu-usuario/crypto-tracker.git
+git clone https://github.com/GabrielaCamilo/CoinMarketCapAPI.git
 cd crypto-tracker
 
 
@@ -69,7 +69,7 @@ lib/
 1. Clone o repositório:
 
 bash
-git clone https://github.com/seu-usuario/crypto-tracker.git
+git clone https://github.com/GabrielaCamilo/CoinMarketCapAPI.git
 cd crypto-tracker
 
 
