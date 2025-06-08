@@ -12,8 +12,6 @@ class CryptocurrencyRepository {
       if (data is! Map<String, dynamic>) {
         throw Exception('Unexpected format: "data" is not a Map');
       }
-      print('Conteúdo de jsonData["data"]:');
-      print(data);
 
       final List<Cryptocurrency> cryptocurrencies = [];
 
@@ -29,9 +27,6 @@ class CryptocurrencyRepository {
       });
 
       cryptocurrencies.sort((a, b) => a.symbol.compareTo(b.symbol));
-
-      print('Criptomoedas convertidas:');
-      cryptocurrencies.forEach((c) => print('${c.name} (${c.symbol}) - \$${c.priceUsd}'));
 
       return cryptocurrencies;
     } catch (e) {

@@ -8,17 +8,10 @@ class CryptocurrencyDataSource {
       final url =
           Uri.parse('${AppConstants.baseUrl}?symbol=$symbols&convert=USD');
 
-      print('URL: $url'); // Debug
-      print('Headers: ${AppConstants.headers}');
-      print('Symbols: $symbols'); 
-
       final response = await http.get(
         url,
         headers: AppConstants.headers,
       );
-
-      print('Status Code: ${response.statusCode}'); // Debug
-      print('Response Body: ${response.body}');
 
       if (response.statusCode == 200) {
         final jsonData = json.decode(response.body);
@@ -28,7 +21,6 @@ class CryptocurrencyDataSource {
             'Failed to load cryptocurrencies: ${response.statusCode}');
       }
     } catch (e) {
-      print('Detailed error: $e');
       throw Exception('Error fetching cryptocurrencies: $e');
     }
   }

@@ -12,7 +12,6 @@ class Cryptocurrency {
   });
 
   factory Cryptocurrency.fromJson(Map<String, dynamic> json) {
-    print('Convertendo JSON para modelo: $json');
     final quote = json['quote'];
     final usdQuote = quote['USD'];
 
